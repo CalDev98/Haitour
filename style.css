@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+font-size: 2.6rem;
+}
+li,
+button,
+label,
+input,
+p {
+font-size: 2rem;
+}
+h2 {
+font-size: 4.8rem;
+}
+h3 {
+font-size: 3rem;
+font-weight: normal;
+}
+h4,
+h5 {
+font-size: 2.8rem;
+}
+a {
+color: white;
+text-decoration: none;
+}
+
+a:focus {
+    outline-style: solid;
+    outline-color: rgb(206, 206, 206);
+}
+
+button {
+    padding: 2rem 4rem;
+    background: linear-gradient(rgba(0,0,0,0.6), #1f2124);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: ease-in 1s;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px black;
+}
+
+button:hover {
+    background: linear-gradient(rgba(0,0,0,0.5), rgb(56, 58, 58));
+}
+
+button:focus {
+    background-color: rgb(236, 235, 148);
+    outline-style: solid;
+    outline-color: white;
+}
+
+
+.main-head {
+    background: transparent;
+    color: white;
+}
+
+.sticky {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+    background: #1f2124ed;
+    animation: slide 0.5s alternate ease-in-out;
+}
+
+@keyframes slide {
+    from {
+      transform: translateY(-5vh);
+    }
+    to {
+      transform: translateY(0vh);
+    }
+  }
+
+nav {
+    display: flex;
+    min-height: 10vh;
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex: 1 1 40rem;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo {
+    flex: 2 1 40rem;
+    display: flex;
+    align-items: center;
+    font-family: 'Merienda One', cursive;
+    text-shadow: 1px 1px 1px black;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+.container1 {
+    /* min-height: 100vh; */
+    background: linear-gradient(rgba(0,0,0,0.3), transparent),
+        url(./img/img1.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero {
+    min-height: 90vh;
+    color: white;
+    text-shadow: 2px 2px 40px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h3 {
+    padding: 5rem;
+    font-weight: normal;
+}
+
+.hero button a:focus{
+    outline: none;
+}
+
+/* Services section */
+.services-head {
+    background: linear-gradient(rgba(42, 42, 42, 0.6), #26364d);
+    padding: 4rem;
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+}
+
+.services-head  h3{
+    padding: 2rem;
+}
+
+.cards {
+    width: 90%;
+    margin: auto;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 25rem;
+    height: 50vh;
+    margin: 2rem 5rem;
+    text-align: center;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1), 0px 20px 20px rgba(0,0,0,0.1);
+}
+
+.card img {
+    max-width: 40%;
+    padding: 2rem;
+    min-height: 20vh;
+}
+
+.card-icon {
+    background: linear-gradient(rgba(42, 42, 42, 0.6), #26364d);
+}
+
+.card h4, card p {
+    padding: 1rem;
+    line-height: 1.8;
+}
+
+#contact {
+    min-height: 100vh;
+    background: url(./img/picture2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper {
+    background-color: rgba(0,0,0,0.5);
+    width: 60%;
+    color: white;
+    border-radius: 25PX;
+}
+
+.form-head {
+    padding: 4rem;
+    text-align: center;
+}
+
+.name-wrapper, .email-wrapper {
+    padding: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-wrapper label {
+    padding: 0rem 3rem;
+}
+
+.contact-wrapper button {
+    width: 100%;
+    padding: 2rem;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.contact-wrapper input {
+    padding: 1rem 2rem;
+}
+.contact-wrapper input:focus {
+    outline-color: rgb(241, 240, 124);
+    outline-style: solid;
+}
+
+.about-section {
+    min-height: 150vh;
+    background: linear-gradient(transparent, #c0c1c3);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s all ease-in-out;
+}
+
+.about-head {
+    width: 90%;
+    margin: auto;
+    padding: 3rem;
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-appear {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.about-head h3 {
+    padding: 2rem;
+}
+
+.our-team {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 3rem;
+    min-height: 80vh;
+}
+
+.our-team h2 {
+    padding: 2rem;
+}
+
+.cards-container {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    flex: 1 1 25rem;
+    min-height: 55vh;
+    margin: 2rem 5rem;
+    text-align: center;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2), 0px 20px 20px rgba(0,0,0,0.2);
+    background-color: rgba(235, 235, 235, 0.918);
+}
+
+.card-img img{
+    max-width: 100%;
+    height: 55vh;
+    transition: 1s ease;
+}
+.card-img img:hover{
+    transform: scale(1.1);
+}
+
+.info-team {
+    position: relative;
+    min-height: 10vh;
+    background-color: white;
+    position: relative;
+    top: -12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    min-height: 60vh;
+    padding: 1rem;
+}
+
+.text-container {
+    padding: 1rem;
+    flex: 1 1 25rem;
+    margin: 2rem;
+    text-align: center;
+    /* border: 2px solid; */
+}
+
+.text-container h3 {
+    font-size: 4rem;
+    font-weight: bold;
+    padding: 2rem;
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+
+.text-container button {
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+}
+
+.text-container p {
+    padding: 1rem 0rem;
+}
+
+.text-container button a:focus{
+    outline: none;
+}
+
+
+
+/* Footer */
+
+footer {
+    color: white;
+    background: #1f2124;
+}
+
+.footer-wrapper {
+    display: flex;
+    padding: 3rem;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    min-height: 10vh;
+    flex-wrap: wrap;
+}
+
+.footer-wrapper h5 {
+    flex: 1 1 40rem;
+}
+
+.footer-wrapper ul {
+    list-style: none;
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+@media screen and (max-width: 932px) {
+    html {
+      font-size: 50%;
+    }
+    .main-head {
+        min-height: 6vh;
+    }
+    nav {
+      text-align: center;
+    }
+    #logo {
+      padding: 2rem;
+      justify-content: center;
+    }
+
+    .services-head {
+        text-align: center;
+    }
+
+    .contact-wrapper {
+        width: 100%;
+    }
+
+    .about-head {
+        text-align: center;
+    }
+    .our-team {
+        text-align: center;
+    }
+
+    .card {
+        width: 100%;
+        text-align: center;
+        height: 40vh;
+    }
+
+    .team-card {
+        min-height: 40vh;
+        margin: 4rem 0rem;
+        text-align: center;
+    }
+
+    .card-img img{
+        max-width: 100%;
+        height: 40vh;
+        transition: 1s ease;
+    }
+
+    footer {
+        text-align: center;
+    }
+    footer h5 {
+        padding-bottom: 3rem;
+    }
+}
